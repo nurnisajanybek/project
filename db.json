@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "title": "aa",
+      "description": "aa",
+      "price": "aa",
+      "image": "aa",
+      "id": 3
+    },
+    {
+      "title": "aaaaaaaa",
+      "description": "yeeeeeey",
+      "price": "aa",
+      "image": "aa",
+      "id": 4
+    },
+    {
+      "title": "Cute catssssssssss",
+      "description": "my cat",
+      "price": "0$",
+      "image": "https://play-lh.googleusercontent.com/AmKSpZt_rynhOO0ID1eS0gqeW3DFzoH6KNZkAAgepQ0t9MDRQTmil-nlY5GqkZ_7El0",
+      "id": 5
+    },
+    {
+      "title": "aa",
+      "description": "",
+      "price": "",
+      "image": "aa",
+      "id": 6
+    }
+  ]
+}
