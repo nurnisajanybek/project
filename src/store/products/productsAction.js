@@ -1,13 +1,16 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 import { API } from "../../helpers/consts";
-import { setOneProduct, setProducts } from "./productsSlice";
+import { setOneProduct, setProducts, setTotalPages } from "./productsSlice";
 
 export const getProducts = createAsyncThunk(
   "@products/getProducts",
-  async (_, { dispatch }) => {
-    const { data } = await axios.get(API);
-    dispatch(setProducts(data));
+  async ({ search = "", currentPage }, { dispatch }) => {
+    const data = await axios.get(
+      `${API}?q=${search}&_page=${currentPage}&_limit=8`
+    );
+    dispatch(setTotalPages(Math.ceil(data.headers["x-total-count"] / 8)));
+    dispatch(setProducts(data.data));
   }
 );
 export const addProduct = createAsyncThunk(
